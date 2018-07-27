@@ -1,0 +1,52 @@
+@import './globals/vars.scss';
+@import './globals/mixins.scss';
+
+.App {
+  max-width: 1440px;
+  font-family: $fontFamily;
+  font-weight: 300;
+
+  .landing-page-header {
+    margin: 30px $sideMargin;
+  }
+
+  .landing-page {
+    @include fluid-type(14px, 16px);
+  }
+
+  &.detail-page {
+    @include fluid-type(14px, 16px);
+    background-color: $lightGray;
+  }
+
+  .page-title {
+    @include fluid-type(20px, 36px);
+    font-weight: 300;
+  }
+
+  .page-description {
+    @include fluid-type(14px, 18px);
+    font-weight: 300;
+  }
+
+  .breadcrumb {
+    @include fluid-type(12px, 14px);
+    padding: 20px 260px;
+
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .landing-page-content {
+    @include fluid-type(14px, 18px);
+    padding: 30px $sideMargin;
+  }
+
+  .detail-page-content {
+    @include fluid-type(14px, 18px);
+    padding: 30px $sideMargin;
+  }
+
+}

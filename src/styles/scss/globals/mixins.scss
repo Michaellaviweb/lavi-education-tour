@@ -1,0 +1,47 @@
+@import 'vars.scss';
+@import 'fonts.scss';
+@import 'mixin-tools.scss';
+
+@mixin buttonStyle() {
+}
+
+@mixin titleStyle(){
+  @include fluid-type-line-height(30px, 40px);
+}
+
+@mixin pageHeaderStyle() {
+  @include fluid-type(20px, 40px);
+}
+
+@mixin subHeaderStyle(){
+  @include fluid-type(16px, 20px);
+}
+
+@mixin bodyStyle(){
+  font-family: $bodyFontFamily;
+  @include fluid-type(14px, 16px);
+}
+
+@mixin linkStyle() {
+  color: $blueFlat;
+  font-weight: bold;
+  font-family: $bodyFontFamily;
+}
+
+@mixin flexCenter() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  align-items: flex-end;
+}
+
+@mixin backgroundCover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

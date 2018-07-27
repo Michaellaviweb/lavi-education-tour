@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+/* Scalable padding */
+/* Scalable padding, all positions */
+/* Scalable margins */
+.Images {
+  width: 250px;
+  height: 250px;
+  margin: 2px 2px;
+  background-color: #FFFFFF; }
+  .Images img {
+    width: 250px;
+    height: 250px; }
+  .Images .overlay {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: -250px 0 0 0;
+    pointer-events: none; }
+    /* Testing fade to opacity css more to work on next week */
+  .Images:hover{
+    opacity: 0.5;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+  }  
+  .Images .image-title {
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    z-index: 100;
+    position: absolute;
+    top: calc(250px - 40px);
+    font-size: calc(12px + 2 * ( (100vw - 420px) / 580));
+    font-weight: 300;
+    text-align: center;
+    z-index: 200;
+    width: 250px;
+    height: 35px;
+    line-height: 35px; }
+    @media screen and (max-width: 420px) {
+      .Images .image-title {
+        font-size: 12px; } }
+    @media screen and (min-width: 1000px) {
+      .Images .image-title {
+        font-size: 14px; } }
+  .Images .image-description {
+    font-size: calc(12px + 0 * ( (100vw - 420px) / 580));
+    font-weight: 300;
+    position: absolute;
+    width: 250px;
+    max-height: calc(250px - 20%);
+    top: 40px;
+    text-align: center;
+    z-index: 100;
+    color: #FFFFFF; }
+    @media screen and (max-width: 420px) {
+      .Images .image-description {
+        font-size: 12px; } }
+    @media screen and (min-width: 1000px) {
+      .Images .image-description {
+        font-size: 12px; } }
+  .Images.small-image {
+    width: 150px;
+    height: 150px; }
+    .Images.small-image .overlay,
+    .Images.small-image img {
+      width: 150px;
+      height: 150px; }
+    .Images.small-image .overlay {
+      margin: -150px 0 0 0; }
+    .Images.small-image .image-title {
+      top: calc(150px - 40px);
+      width: 150px; }
+    .Images.small-image .image-description {
+      width: 150px;
+      max-height: calc(150px - 20%); }
+
+/*# sourceMappingURL=Image.css.map */

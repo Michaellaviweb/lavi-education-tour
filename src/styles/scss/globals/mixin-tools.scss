@@ -1,0 +1,61 @@
+//- Mixin: Fluid Type
+/// @site https://madebymike.com.au/writing/precise-control-responsive-typography/
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 1000px) {
+  font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+  // line-height: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}) + #{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+  @media screen and (max-width: $lower-range) {
+    font-size: $min-font-size;
+    // line-height: calc(#{$min-font-size} + #{$min-font-size} );
+  }
+  @media screen and (min-width: $upper-range){
+    font-size: $max-font-size;
+    // line-height:  calc(#{$max-font-size} + #{$max-font-size} );
+  }
+}
+
+// Single line-height responsive scaling text.
+@mixin fluid-type-line-height($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 1000px ) {
+  font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+  line-height: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+  @media screen and (max-width: $lower-range) {
+    font-size: $min-font-size;
+    line-height: $min-font-size;
+  }
+  @media screen and (min-width: $upper-range){
+    font-size: $max-font-size;
+    line-height: $max-font-size;
+  }
+}
+
+/* Scalable padding */
+@mixin fluid-padding($position: bottom, $min-size: 12px, $max-size: 21px, $lower-range: 420px, $upper-range: 1000px) {
+  padding-#{$position}: calc(#{$min-size} + #{(($max-size / ($max-size * 0 + 1)) - ($min-size / ($min-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+  @media screen and (max-width: $lower-range) {
+    padding-#{$position}: $min-size;
+  }
+  @media screen and (min-width: $upper-range){
+    padding-#{$position}: $max-size;
+  }
+}
+
+/* Scalable padding, all positions */
+@mixin fluid-padding-all($min-size: (12px, 12px, 12px, 12px), $max-size: (21px, 21px, 21px, 21px), $lower-range: 420px, $upper-range: 1000px) {
+  @include fluid-padding(top, nth($min-size, 1), nth($max-size, 1), $lower-range, $upper-range);
+  @include fluid-padding(right, nth($min-size, 2), nth($max-size, 2), $lower-range, $upper-range);
+  @include fluid-padding(bottom, nth($min-size, 3), nth($max-size, 3), $lower-range, $upper-range);
+  @include fluid-padding(left, nth($min-size, 4), nth($max-size, 4), $lower-range, $upper-range);
+}
+
+/* Scalable margins */
+@mixin fluid-margin($position: bottom, $min-size: 12px, $max-size: 21px, $lower-range: 420px, $upper-range: 1000px) {
+  margin-#{$position}: calc(#{$min-size} + #{(($max-size / ($max-size * 0 + 1)) - ($min-size / ($min-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+  @media screen and (max-width: $lower-range) {
+    margin-#{$position}: $min-size;
+  }
+  @media screen and (min-width: $upper-range){
+    margin-#{$position}: $max-size;
+  }
+}

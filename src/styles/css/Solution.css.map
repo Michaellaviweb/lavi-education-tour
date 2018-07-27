@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAQ,kFAA0E;;;;ACGlF,SAAU;EACR,MAAM,EAAE,SAAS",
+"sources": ["../scss/globals/fonts.scss","../scss/Solution.scss"],
+"names": [],
+"file": "Solution.css"
+}

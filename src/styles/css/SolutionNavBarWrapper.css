@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+/* Scalable padding */
+/* Scalable padding, all positions */
+/* Scalable margins */
+.SolutionNavBarWrapper {
+  display: inline-flex;
+  flex-direction: row;
+  background-color: #333B4C;
+  width: 1440px; }
+  .SolutionNavBarWrapper.carousel {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; }
+  .SolutionNavBarWrapper .wrapper {
+    overflow-y: hidden;
+    background-color: #FFFFFF;
+    margin: 0px 140px; }
+  .SolutionNavBarWrapper .bigImage, .SolutionNavBarWrapper .bigImage img {
+    float: left;
+    margin: 2px 4px 2px 2px;
+    height: 500px;
+    width: 500px; }
+  .SolutionNavBarWrapper .scroll-arrow {
+    position: absolute;
+    margin-top: 50px;
+    color: #FFFFFF; }
+  .SolutionNavBarWrapper .carousel-button {
+    color: #FFFFFF; }
+    .SolutionNavBarWrapper .carousel-button.button-left {
+      margin: auto -120px auto 120px;
+      align-self: flex-start;
+      text-align: right; }
+    .SolutionNavBarWrapper .carousel-button.button-right {
+      margin: auto 120px auto -120px; }
+  .SolutionNavBarWrapper.single-row .smallImages {
+    max-height: 250px; }
+  .SolutionNavBarWrapper.double-row .smallImages {
+    max-height: 500px; }
+
+/*# sourceMappingURL=SolutionNavBarWrapper.css.map */

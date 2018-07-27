@@ -1,0 +1,10 @@
+@import './globals/vars.scss';
+@import './globals/mixins.scss';
+
+.Benefit {
+  text-align: center;
+  margin-bottom: 20px;
+  img {
+    margin-bottom: 10px;
+  }
+}

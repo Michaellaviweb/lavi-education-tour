@@ -1,0 +1,196 @@
+//Data Structure
+education=[
+	{
+		"styleSheet":"styleSheet Name",
+		"categories":[
+			{
+				"title":"Bookstore",
+				"headerText":"This is placeholder header text",
+				"thumbImage":"name of thumb image",
+				"categoryDescription":{
+					"paragraphs":[
+						"text goes here. add HTML if desired <ul class=\"ul-class-1\"><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>",
+						"text goes here. add HTML if desired <ul class=\"ul-class-1\"><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>"
+					],
+					"images":[//initially, all images are in right orientation. Secondary and tirnary releases can switch orientations and edit size
+						{
+							"path":"image File Path"//,
+							//"orientation":"left",
+							//"size":{
+							//	"height":"20%",
+							//	"width":"20%"
+							//}
+						},
+						{
+							"path":"image File Path"//,
+							//"orientation":"right",
+							//"size":{
+							//	"height":"20%",
+							//"width":"20%"
+							//}
+						}
+					],
+					"form":{
+						"link":"pardot address",
+						"fields":{
+							"name":"your name",//default for user
+							"email":"you@example.com",//default for user
+							"industry":"education"//defaulted, hidden from user
+						}
+					}
+				}
+			},{
+				"title":"Stadium",
+				"headerText":"This is placeholder header text",
+				"thumbImage":"name of thumb image",
+				"categoryDescription":{
+					"paragraphs":[
+						"text goes here. add HTML if desired <ul><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>",
+						"text goes here. add HTML if desired <ul><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>"
+					],
+					"images":[//initially, all images are in right orientation. Secondary and tirnary releases can switch orientations and edit size
+						{
+							"path":"image File Path"//,
+							//"orientation":"left",
+							//"size":{
+							//	"height":"20%",
+							//	"width":"20%"
+							//}
+						},
+						{
+							"path":"image File Path"//,
+							//"orientation":"right",
+							//"size":{
+							//	"height":"20%",
+							//"width":"20%"
+							//}
+						}
+					],
+					"form":{
+						"link":"pardot address",
+						"fields":{
+							"name":"your name",//default for user
+							"email":"you@example.com",//default for user
+							"industry":"education"//defaulted, hidden from user
+						}
+					}
+				},
+			},{
+				"title":"Restaurant",
+				"headerText":"This is placeholder header text",
+				"thumbImage":"name of thumb image",
+				"categoryDescription":{
+					"paragraphs":[
+						"text goes here. add HTML if desired <ul><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>",
+						"text goes here. add HTML if desired <ul><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>"
+					],
+					"images":[//initially, all images are in right orientation. Secondary and tirnary releases can switch orientations and edit size
+						{
+							"path":"image File Path"//,
+							//"orientation":"left",
+							//"size":{
+							//	"height":"20%",
+							//	"width":"20%"
+							//}
+						},
+						{
+							"path":"image File Path"//,
+							//"orientation":"right",
+							//"size":{
+							//	"height":"20%",
+							//"width":"20%"
+							//}
+						}
+					],
+					"form":{
+						"link":"pardot address",
+						"fields":{
+							"name":"your name",//default for user
+							"email":"you@example.com",//default for user
+							"industry":"education"//defaulted, hidden from user
+						}
+					}
+				}
+			}
+		],
+		"content":[
+			{
+				"title":"Solution Name Goes Here",
+				"categories":["Bookstore", "Stadium", "Restaurant"],
+				"homeImage":"name of 1200 x 750 image",
+        "thumbImage":"name of thumb image",
+        "description": "desription here",
+				"content":{
+					"paragraphs":[
+						"text goes here. add HTML if desired <ul><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>",
+						"text goes here. add HTML if desired <ul><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>"
+					],
+					"images":[//initially, all images are in right orientation. Secondary and tirnary releases can switch orientations and edit size
+						{
+							"path":"image File Path"//,
+							//"orientation":"left",
+							//"size":{
+							//	"height":"20%",
+							//	"width":"20%"
+							//}
+						},
+						{
+							"path":"image File Path"//,
+							//"orientation":"right",
+							//"size":{
+							//	"height":"20%",
+							//"width":"20%"
+							//}
+						}
+					],
+					"form":{
+						"link":"pardot address",
+						"fields":{
+							"name":"your name",//default for user
+							"email":"you@example.com",//default for user
+							"industry":"education"//defaulted, hidden from user
+						}
+					}
+				}
+			},
+			{
+				"title":"Solution Name Goes Here",
+				"categories":["Bookstore", "Stadium", "Restaurant"],
+				"homeImage":"name of 1200 x 750 image",
+				"thumbImage":"name of thumb image",
+				"content":{
+					"paragraphs":[
+						"text goes here. add HTML if desired <ul><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>",
+						"text goes here. add HTML if desired <ul><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>"
+					],
+					"images":[//initially, all images are in right orientation. Secondary and tirnary releases can switch orientations and edit size
+						{
+							"path":"image File Path"//,
+							//"orientation":"left",
+							//"size":{
+							//	"height":"20%",
+							//	"width":"20%"
+							//}
+						},
+						{
+							"path":"image File Path"//,
+							//"orientation":"right",
+							//"size":{
+							//	"height":"20%",
+							//"width":"20%"
+							//}
+						}
+					],
+					"form":{
+						"link":"pardot address",
+						"fields":{
+							"name":"your name",//default for user
+							"email":"you@example.com",//default for user
+							"industry":"education"//defaulted, hidden from user
+						}
+					}
+				}
+			}
+		]
+	}
+]

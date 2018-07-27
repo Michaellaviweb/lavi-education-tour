@@ -1,0 +1,52 @@
+@import './globals/vars.scss';
+@import './globals/mixins.scss';
+.SolutionNavBarWrapper {
+  display: inline-flex;
+  flex-direction: row;
+  background-color: $darkGray;
+  width: 1440px;
+
+  &.carousel {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .wrapper {
+    overflow-y: hidden;
+    background-color: $white;
+    margin: 0px $sideMargin;
+  }
+
+  .bigImage, .bigImage img {
+    float: left;
+    margin: 2px 4px 2px 2px;
+    height: $bigImageSize;
+    width: $bigImageSize;
+  }
+  .scroll-arrow {
+    position: absolute;
+    margin-top: 50px;
+    color: $white;
+  }
+  .carousel-button {
+    color: $white;
+    &.button-left {
+      margin: auto -120px auto 120px;
+      align-self: flex-start;
+      text-align: right;
+    }
+    &.button-right {
+      margin: auto 120px auto -120px;
+    }
+  }
+  &.single-row {
+    .smallImages {
+      max-height: $smallImageSize;
+    }
+  }
+  &.double-row {
+    .smallImages {
+      max-height: $bigImageSize;
+    }
+  }
+}

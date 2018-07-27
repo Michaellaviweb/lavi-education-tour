@@ -1,0 +1,68 @@
+@import './globals/vars.scss';
+@import './globals/mixins.scss';
+
+.Images {
+  width: $smallImageSize;
+  height: $smallImageSize;
+  margin: 2px 2px;
+
+  background-color: $white;
+  img {
+    width: $smallImageSize;
+    height: $smallImageSize;
+  }
+  .overlay {
+    position: relative;
+    width: $smallImageSize;
+    height: $smallImageSize;
+    margin: -$smallImageSize 0 0 0;
+    pointer-events: none;
+  }
+  .image-title {
+    background: $shadowTransparency;
+    color: $white;
+    z-index: 100;
+    position: absolute;
+    top: calc(#{$smallImageSize} - 40px);
+    @include fluid-type(12px, 14px);
+    font-weight: 300;
+    text-align: center;
+    z-index: 200;
+    width: $smallImageSize;
+    height: 35px;
+    line-height: 35px;
+  }
+
+  .image-description {
+    @include fluid-type(12px, 12px);
+    font-weight: 300;
+    position: absolute;
+    width: $smallImageSize;
+    max-height: calc(#{$smallImageSize} - 20%);
+    top: 40px;
+    text-align: center;
+    z-index: 100;
+    color: $white;
+  }
+
+  &.small-image {
+    width: $smallestImageSize;
+    height: $smallestImageSize;
+    .overlay,
+    img {
+      width: $smallestImageSize;
+      height: $smallestImageSize;
+    }
+    .overlay {
+      margin: -$smallestImageSize 0 0 0;
+    }
+    .image-title {
+      top: calc(#{$smallestImageSize} - 40px);
+      width: $smallestImageSize;
+    }
+    .image-description {
+      width: $smallestImageSize;
+      max-height: calc(#{$smallestImageSize} - 20%);
+    }
+  }
+}

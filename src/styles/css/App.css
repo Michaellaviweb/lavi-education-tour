@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+/* Scalable padding */
+/* Scalable padding, all positions */
+/* Scalable margins */
+.App {
+  max-width: 1440px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300; }
+  .App .landing-page-header {
+    margin: 30px 140px; }
+  .App .landing-page {
+    font-size: calc(14px + 2 * ( (100vw - 420px) / 580)); }
+    @media screen and (max-width: 420px) {
+      .App .landing-page {
+        font-size: 14px; } }
+    @media screen and (min-width: 1000px) {
+      .App .landing-page {
+        font-size: 16px; } }
+  .App.detail-page {
+    font-size: calc(14px + 2 * ( (100vw - 420px) / 580));
+    background-color: #E4E4E4; }
+    @media screen and (max-width: 420px) {
+      .App.detail-page {
+        font-size: 14px; } }
+    @media screen and (min-width: 1000px) {
+      .App.detail-page {
+        font-size: 16px; } }
+  .App .page-title {
+    font-size: calc(20px + 16 * ( (100vw - 420px) / 580));
+    font-weight: 300; }
+    @media screen and (max-width: 420px) {
+      .App .page-title {
+        font-size: 20px; } }
+    @media screen and (min-width: 1000px) {
+      .App .page-title {
+        font-size: 36px; } }
+  .App .page-description {
+    font-size: calc(14px + 4 * ( (100vw - 420px) / 580));
+    font-weight: 300; }
+    @media screen and (max-width: 420px) {
+      .App .page-description {
+        font-size: 14px; } }
+    @media screen and (min-width: 1000px) {
+      .App .page-description {
+        font-size: 18px; } }
+  .App .breadcrumb {
+    font-size: calc(12px + 2 * ( (100vw - 420px) / 580));
+    padding: 20px 260px; }
+    @media screen and (max-width: 420px) {
+      .App .breadcrumb {
+        font-size: 12px; } }
+    @media screen and (min-width: 1000px) {
+      .App .breadcrumb {
+        font-size: 14px; } }
+    .App .breadcrumb a {
+      text-decoration: underline;
+      cursor: pointer; }
+  .App .landing-page-content {
+    font-size: calc(14px + 4 * ( (100vw - 420px) / 580));
+    padding: 30px 140px; }
+    @media screen and (max-width: 420px) {
+      .App .landing-page-content {
+        font-size: 14px; } }
+    @media screen and (min-width: 1000px) {
+      .App .landing-page-content {
+        font-size: 18px; } }
+  .App .detail-page-content {
+    font-size: calc(14px + 4 * ( (100vw - 420px) / 580));
+    padding: 30px 140px; }
+    @media screen and (max-width: 420px) {
+      .App .detail-page-content {
+        font-size: 14px; } }
+    @media screen and (min-width: 1000px) {
+      .App .detail-page-content {
+        font-size: 18px; } }
+
+/*# sourceMappingURL=App.css.map */
