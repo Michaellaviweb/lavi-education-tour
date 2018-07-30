@@ -31,7 +31,7 @@ class SolutionNavBarWrapper extends React.Component {
 
     return (
       <div className={`SolutionNavBarWrapper carousel ${isDetailPage ? 'single-row' : 'double-row'}`}>
-        <div className="carousel-button button-left">l</div>
+        <a className="carousel-button button-left">l</a>
         <div className="wrapper">
           <div className="scroll-arrow">a</div>
           <div className="scroll"  style={{width:width+'px'}}>
@@ -55,7 +55,7 @@ class SolutionNavBarWrapper extends React.Component {
             </div>
           </div>
         </div>
-        <div className="carousel-button button-right">r</div>
+        <a className="carousel-button button-right">r</a>
       </div>
     );
   }

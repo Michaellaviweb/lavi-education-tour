@@ -3,6 +3,11 @@
 /* Scalable padding, all positions */
 /* Scalable margins */
 .Solution {
-  margin: 0px 260px; }
+  /*margin: 0px 260px; */
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 /*# sourceMappingURL=Solution.css.map */

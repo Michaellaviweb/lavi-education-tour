@@ -10,26 +10,46 @@
   .Images img {
     width: 250px;
     height: 250px; }
-  .Images .overlay {
+  .Images .overlay {    
     position: relative;
     width: 250px;
     height: 250px;
-    margin: -250px 0 0 0;
-    pointer-events: none; }
-    /* Testing fade to opacity css more to work on next week */
+    margin: -255px 0 0 0;
+  }
+
+  .Images .overlay:hover{    
+    width: 250px;
+    height: 250px;
+    position: relative;
+    background-color: #000;
+    opacity:.5;
+    transition: .5s ease-out;
+    -moz-transition: .5s ease-out;
+    -webkit-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
+  }  
+
+  .Images .overlay:hover .image-description{
+    display: block;
+ 
+  }
+
+  /* Testing fade to opacity css more to work on next week 
   .Images:hover{
-    opacity: 0.5;
+    opacity: .5;
     transition: opacity .5s ease-out;
     -moz-transition: opacity .5s ease-out;
     -webkit-transition: opacity .5s ease-out;
     -o-transition: opacity .5s ease-out;
-  }  
+  }  */
+  
   .Images .image-title {
+    display: block;
     background: rgba(0, 0, 0, 0.5);
     color: #FFFFFF;
     z-index: 100;
     position: absolute;
-    top: calc(250px - 40px);
+    top: calc(255px - 40px);
     font-size: calc(12px + 2 * ( (100vw - 420px) / 580));
     font-weight: 300;
     text-align: center;
@@ -43,7 +63,9 @@
     @media screen and (min-width: 1000px) {
       .Images .image-title {
         font-size: 14px; } }
+
   .Images .image-description {
+    display: none;
     font-size: calc(12px + 0 * ( (100vw - 420px) / 580));
     font-weight: 300;
     position: absolute;

@@ -3,34 +3,59 @@
 /* Scalable padding, all positions */
 /* Scalable margins */
 .SolutionNavBarWrapper {
-  display: inline-flex;
-  flex-direction: row;
-  background-color: #333B4C;
-  width: 1440px; }
+  
+  /*background-color: #333B4C;*/
+  width: 100%; }
   .SolutionNavBarWrapper.carousel {
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch; }
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
   .SolutionNavBarWrapper .wrapper {
     overflow-y: hidden;
     background-color: #FFFFFF;
-    margin: 0px 140px; }
+    width: 100%;
+    
+    /*margin: 0px 140px;*/
+  }
   .SolutionNavBarWrapper .bigImage, .SolutionNavBarWrapper .bigImage img {
     float: left;
     margin: 2px 4px 2px 2px;
     height: 500px;
     width: 500px; }
+  
   .SolutionNavBarWrapper .scroll-arrow {
     position: absolute;
+    left:10%;
     margin-top: 50px;
     color: #FFFFFF; }
+    
   .SolutionNavBarWrapper .carousel-button {
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    width:10%;
+    height: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: 1000;
+    position: absolute;
+    margin-top:2px;
+  }
+  .SolutionNavBarWrapper .carousel-button.button-right {
+    
+    right: 0px;
+    top:0px;
+  }
+  /*
     .SolutionNavBarWrapper .carousel-button.button-left {
-      margin: auto -120px auto 120px;
+      /*margin: auto -120px auto 120px;
       align-self: flex-start;
-      text-align: right; }
+      text-align: right;
+
+    }
     .SolutionNavBarWrapper .carousel-button.button-right {
-      margin: auto 120px auto -120px; }
+      /*margin: auto 120px auto -120px;
+    }
+  */
   .SolutionNavBarWrapper.single-row .smallImages {
     max-height: 250px; }
   .SolutionNavBarWrapper.double-row .smallImages {

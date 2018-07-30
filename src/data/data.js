@@ -445,7 +445,7 @@ var solutions = [
 		"title":"Solution 6",
     "bannerImage":"https://www.lavi.com/upload/CustomFiles/education/img/in-queue.jpg",
 		"url": "checkoutqueue",
-		"description":"description 6",
+		"description":"Testing the description box blah blah blah blah blah",
 				"categories":["Bookstore", "Stadium", "Restaurant"],
 				"homeImage":"https://www.ionaudio.com/tradeshows/CES2018/img/web/Raptor_web.jpg",
 				"thumbImage":"https://www.lavi.com/upload/CustomFiles/education/img/Checkout-Queue.jpg",
@@ -730,6 +730,16 @@ var solutions = [
 							//	"height":"20%",
 							//"width":"20%"
 							//}
+						}
+					],
+					"keyBenefits": [
+						{
+						  "icon": "http://via.placeholder.com/150x150",
+						  "text": "Decrease wait times",
+						},
+						{
+						  "icon": "http://via.placeholder.com/150x150",
+						  "text": "Facilitate customer throughput",
 						}
 					],
 					"form":{
@@ -1024,6 +1034,16 @@ var solutions = [
 							//	"height":"20%",
 							//"width":"20%"
 							//}
+						}
+					],
+					"keyBenefits": [
+						{
+						  "icon": "http://via.placeholder.com/150x150",
+						  "text": "Decrease wait times",
+						},
+						{
+						  "icon": "http://via.placeholder.com/150x150",
+						  "text": "Facilitate customer throughput",
 						}
 					],
 					"form":{

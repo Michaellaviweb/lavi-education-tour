@@ -7,6 +7,7 @@ class Data extends Component {
 		var arr=[];
 		Object.keys(data).forEach(function(key){
 			arr.push(data[key]);
+			//console.log(data);
 		});
 		return <ul>{arr.map(item => <DataChild key={item.label} label={item.title} />)}</ul>;
 	}
@@ -22,4 +23,4 @@ class DataChild extends React.Component {
 export {
 	Data, 
 	DataChild
-};
+};00

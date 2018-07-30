@@ -30,12 +30,12 @@ class Image extends React.Component {
         <img
           id={this.props.title}
           className='content-image'
-          onClick={() => this.handleChangeOnClickOnImage()}
+          
           src={this.props.source}
           alt=""
         />
 
-        <div className="overlay">
+        <div className="overlay" onClick={() => this.handleChangeOnClickOnImage()}>
           <div className="image-title">
             <IndividualSolutionTitle  title={this.props.title} />
           </div>

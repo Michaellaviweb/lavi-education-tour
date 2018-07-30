@@ -23,7 +23,7 @@ class IndividualContentWrapper extends React.Component {
         </div>
 
         <div className="solution-content-container">
-          <div className="solution-content">
+          <div className="solution-content col">
 
             <div className="solution-title">
               <MainSolutionTitle title={this.props.currentSolution.title} />
@@ -48,7 +48,7 @@ class IndividualContentWrapper extends React.Component {
             </div>
           </div>
 
-          <div className="sidebar">
+          <div className="sidebar col">
             <div className="key-benefits">
               <div className="key-benefits-title">Key Benefits</div>
               {this.props.currentSolution.content.keyBenefits !== undefined &&
