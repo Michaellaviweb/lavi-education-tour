@@ -2,78 +2,34 @@
 /* Scalable padding */
 /* Scalable padding, all positions */
 /* Scalable margins */
-.IndividualContentWrapper {
-  margin: 0px 0px;
-  background: #FFFFFF; }
-  .IndividualContentWrapper .solution-title {
-    font-size: calc(20px + 16 * ( (100vw - 420px) / 580));
-    margin-bottom: 30px; }
-    @media screen and (max-width: 420px) {
-      .IndividualContentWrapper .solution-title {
-        font-size: 20px; } }
-    @media screen and (min-width: 1000px) {
-      .IndividualContentWrapper .solution-title {
-        font-size: 36px; } }
-        .col
-        {
-            float: left;
-        
-            width: 50%;
-            padding: 15px;
-        }
-        
-        .col:first-child
-        {
-            margin-left: 0;
-        }
-    .IndividualContentWrapper .solution-image img {
-      width:100%;
-      max-width: 1200px;
-      max-height: 750px; }
-  .IndividualContentWrapper .solution-content-container {
-    /*
-    display: flex;
-    flex-direction: row;
-    padding: 30px 100px 60px 100px;
-    */
-  }
-  /*
-  .IndividualContentWrapper .solution-content {
-    width: 100%; }
-    */
-  .IndividualContentWrapper .key-benefits-title {
-    color: #666B75;
-    font-size: calc(18px + 6 * ( (100vw - 420px) / 580));
-    margin-bottom: 30px;
-    text-align: center; }
-    @media screen and (max-width: 420px) {
-      .IndividualContentWrapper .key-benefits-title {
-        font-size: 18px; } }
-    @media screen and (min-width: 1000px) {
-      .IndividualContentWrapper .key-benefits-title {
-        font-size: 24px; } }
-  .IndividualContentWrapper .key-benefits {
-    /*padding: 40px;*/
-    background: #E4E4E4; }
-  .IndividualContentWrapper .sidebar {
-    /*width: 250px;
-    margin-left: 40px; */
-  }
-  .IndividualContentWrapper .solution-navigation {
-    margin: 30px 0; }
-  .IndividualContentWrapper .banner-image {
-    margin: 30px auto;
-    text-align: center; }
-  .IndividualContentWrapper .content-images {
-    margin-top: 60px;
-    border-top: 1px solid #000000;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: flex-start; }
-    .IndividualContentWrapper .content-images .content-image {
-      width: 150px;
-      margin-right: 10px; }
+
+.key-benefits{
+  text-align: center;
+  font-size: 20px;
+  padding:10px;
+  background-color: lightgrey;
+}
+
+.key-benefits-title{
+  font-size:30px;
+  padding:1em;
+}
+.solution-title{
+  font-size: 40px;
+}
+.paragraph{
+  font-size:15px;
+  padding-bottom:1em;
+}
+.content-images .content-image{
+  float: left;
+
+    width: 50%;
+    padding: 15px;
+}
+.content-images .content-image:first-child
+{
+    margin-left: 0;
+}
 
 /*# sourceMappingURL=IndividualContentWrapper.css.map */

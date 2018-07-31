@@ -18,13 +18,13 @@ class IndividualContentWrapper extends React.Component {
         <div className="solution-image">
           <img src={this.props.currentSolution.homeImage} />
         </div>
-        <div className="banner-image">
+        <div className="banner-image jumbo">
           <img src={this.props.currentSolution.bannerImage} />
         </div>
 
-        <div className="solution-content-container">
-          <div className="solution-content col">
-
+        <div className="solution-content-container row">
+          <div className="solution-content col m6">
+            <div className="container">
             <div className="solution-title">
               <MainSolutionTitle title={this.props.currentSolution.title} />
             </div>
@@ -46,9 +46,11 @@ class IndividualContentWrapper extends React.Component {
                         </div>
               })}
             </div>
+            </div>
           </div>
 
-          <div className="sidebar col">
+          <div className="sidebar col m6">
+          <div className="container">
             <div className="key-benefits">
               <div className="key-benefits-title">Key Benefits</div>
               {this.props.currentSolution.content.keyBenefits !== undefined &&
@@ -62,6 +64,7 @@ class IndividualContentWrapper extends React.Component {
             <div className="solution-navigation">
               <a href={this.props.previousSolution()}>Previous Solution</a>
               <a href={this.props.nextSolution()}>Next Solution</a>
+            </div>
             </div>
           </div>
 

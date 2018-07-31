@@ -70,41 +70,41 @@ var solutions = [
 			{
 			"title":"Bookstore",//Home Page
 			"url": "bookstore",
-				"headerText":"1 This is placeholder header text",
-				"thumbImage":"https://www.lavi.com/upload/CustomFiles/education/img/main.jpg",//Big Image
-				"categoryDescription":{
-					"paragraphs":[
-						"text goes here. add HTML if desired <ul class=\"ul-class-1\"><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>",
-						"text goes here. add HTML if desired <ul class=\"ul-class-1\"><li>Lorem Ipsum dolor sit amet</li><li>Consectetur adipisicing elit, sed do</li></ul>"
-					],
-					"images":[//initially, all images are in right orientation. Secondary and tirnary releases can switch orientations and edit size
-						{
-							"path":"http://via.placeholder.com/150x150"//,
+			"headerText":"1 This is placeholder header text",
+			"thumbImage":"https://www.lavi.com/upload/CustomFiles/education/img/main.jpg",//Big Image
+			"categoryDescription":{
+				"paragraphs":[
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis leo id convallis congue. Nulla vitae nulla erat. Mauris volutpat congue ex et tincidunt. Praesent iaculis erat luctus accumsan sagittis.",
+					"Integer malesuada vel purus in porta. Phasellus tincidunt pulvinar risus, nec fermentum velit tincidunt vel. Donec cursus porta elementum."
+				],
+				"images":[//initially, all images are in right orientation. Secondary and tirnary releases can switch orientations and edit size
+					{
+						"path":"http://via.placeholder.com/150x150"//,
 							//"orientation":"left",
 							//"size":{
 							//	"height":"20%",
 							//	"width":"20%"
 							//}
-						},
-						{
-							"path":"http://via.placeholder.com/150x150"//,
+					},
+					{
+						"path":"http://via.placeholder.com/150x150"//,
 							//"orientation":"right",
 							//"size":{
 							//	"height":"20%",
 							//"width":"20%"
 							//}
-						}
-					],
-					"form":{
-						"link":"pardot address",
-						"fields":{
-							"name":"your name",//default for user
-							"email":"you@example.com",//default for user
-							"industry":"education"//defaulted, hidden from user
-						}
+					}
+				],
+				"form":{
+					"link":"pardot address",
+					"fields":{
+						"name":"your name",//default for user
+						"email":"you@example.com",//default for user
+						"industry":"education"//defaulted, hidden from user
 					}
 				}
-			},{
+			}
+		},{
 		"title":"Stadium",
 		"url": "stadium",
 				"headerText":"2 This is placeholder header text",
@@ -143,6 +143,7 @@ var solutions = [
 				},
 			},{
 				"title":"Restaurant",
+				"url": "restaurant",
 				"headerText":"This is placeholder header text",
 				"thumbImage":"http://via.placeholder.com/300x300",
 				"categoryDescription":{
@@ -181,10 +182,10 @@ var solutions = [
 		],
 		"content":[ //small images
 			{
-		"id": "0",
-		"url": "bookstore",
-				"title":"Solution 1",
-        "bannerImage":"https://www.lavi.com/upload/CustomFiles/education/img/in-queue.jpg",
+			"id": "0",
+			"url": "solution1",
+			"title":"Solution 1",
+        	"bannerImage":"https://www.lavi.com/upload/CustomFiles/education/img/in-queue.jpg",
 				"description":"description 1",
 				"categories":["Bookstore"],
 				"homeImage":"http://ponyzone.us/wp-content/uploads/2018/01/bathroom-led-light-fixtures-over-mirror-house-decorations-regarding-proportions-1200-x-750.jpg",
@@ -445,7 +446,7 @@ var solutions = [
 		"title":"Solution 6",
     "bannerImage":"https://www.lavi.com/upload/CustomFiles/education/img/in-queue.jpg",
 		"url": "checkoutqueue",
-		"description":"Testing the description box blah blah blah blah blah",
+		"description":"description 6",
 				"categories":["Bookstore", "Stadium", "Restaurant"],
 				"homeImage":"https://www.ionaudio.com/tradeshows/CES2018/img/web/Raptor_web.jpg",
 				"thumbImage":"https://www.lavi.com/upload/CustomFiles/education/img/Checkout-Queue.jpg",
@@ -732,16 +733,6 @@ var solutions = [
 							//}
 						}
 					],
-					"keyBenefits": [
-						{
-						  "icon": "http://via.placeholder.com/150x150",
-						  "text": "Decrease wait times",
-						},
-						{
-						  "icon": "http://via.placeholder.com/150x150",
-						  "text": "Facilitate customer throughput",
-						}
-					],
 					"form":{
 						"link":"pardot address",
 						"fields":{
@@ -1010,7 +1001,7 @@ var solutions = [
     "bannerImage":"https://www.lavi.com/upload/CustomFiles/education/img/in-queue.jpg",
 		"url": "18",
 		"description":"description 18",
-				"categories":["Bookstore", "Stadium", "Restaurant"],
+				"categories":["Bookstore", "Restaurant"],
 				"homeImage":"http://www.sapeloweekendatbernies.com/wp-content/uploads/2015/05/RJ-Reynolds-Mansion-1200-x-750.png",
 				"thumbImage":"https://www.lavi.com/upload/CustomFiles/education/img/in-queue.jpg",
 				"content":{
@@ -1034,16 +1025,6 @@ var solutions = [
 							//	"height":"20%",
 							//"width":"20%"
 							//}
-						}
-					],
-					"keyBenefits": [
-						{
-						  "icon": "http://via.placeholder.com/150x150",
-						  "text": "Decrease wait times",
-						},
-						{
-						  "icon": "http://via.placeholder.com/150x150",
-						  "text": "Facilitate customer throughput",
 						}
 					],
 					"form":{

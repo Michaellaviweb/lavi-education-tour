@@ -16,7 +16,7 @@
     background-color: #FFFFFF;
     width: 100%;
     
-    /*margin: 0px 140px;*/
+    padding: 0px 10% 0px 10%;
   }
   .SolutionNavBarWrapper .bigImage, .SolutionNavBarWrapper .bigImage img {
     float: left;

@@ -4,16 +4,28 @@ import { solutions } from './data/data.js';
 import Solution from './Components/Solution.js';
 import SolutionNavBarWrapper from './Components/SolutionNavBarWrapper.js';
 import './styles/css/App.css';
+import './styles/css/globals/beauter.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
     let isDetailPage = true;
     this.state = {
+      currentSolution: {
+        headerText: '',
+        thumbImage: '',
+        categoryDescription: {
+          paragraphs: [],
+          images: [],
+          form: {}
+        }
+      },
       solutions: solutions[0],
+      content: solutions[0].content,
       isDetailPage: false,
-      filter: "Bookstore"
+      filter: ""
     }
+    this.componentDidMount = this.componentDidMount.bind(this);
     this.changeClassNameToShow = this.changeClassNameToShow.bind(this);
     this.changeClassNameToHide = this.changeClassNameToHide.bind(this);
     this.handleChangeOnClick = this.handleChangeOnClick.bind(this);
@@ -22,28 +34,57 @@ class App extends Component {
     this.previousSolution = this.previousSolution.bind(this);
     this.nextSolution = this.nextSolution.bind(this);
     this.getUrlForID = this.getUrlForID.bind(this);
+    //this.render = this.render.bind(this);
   }
   componentDidMount() {
     let isDetailPage = false;
     let currentSolution;
-    let filter = "Bookstore";
+    let filter = '';
+    let location = window.location.pathname;
+    let content = this.state.content;
+    console.log(location);
 
     if (typeof window === 'object') {
-      if (window.location.pathname === '/') {
+      //if (window.location.pathname === '/'+filter) {
+      currentSolution = this.state.solutions.categories.filter(catagory => {
+        return '/'+catagory.url === location
+      })[0];
+      
+      if(currentSolution === undefined){
+        
+        isDetailPage = true;
+        currentSolution = this.state.solutions.content.filter(content => {
+          //return content.categories.includes()
+          return '/'+content.url === location
+        })[0];
+        filter = currentSolution.categories[0];
+      }
+      else{
         isDetailPage = false;
-      } else {
+        filter = currentSolution.title;
+        content = this.state.solutions.content.filter(content => {
+          return content.categories.includes(filter)
+        });
+        console.log(content);
+      }
+      console.log(currentSolution);
+        
+      /*} else {
         isDetailPage = true;
         currentSolution = this.state.solutions.content.filter(content => {
           return content.categories.includes(filter)
         }).filter((content, index) => {
           return '/'+content.url === window.location.pathname
         })[0];
-        // console.log('cs', currentSolution);
-      }
+        //console.log('cs', currentSolution);
+      }*/
     }
     let items = Object.assign({}, this.state);
     items.isDetailPage = isDetailPage;
     items.currentSolution = currentSolution;
+    items.location = location;
+    items.filter = filter;
+    items.content = content;
     this.setState(items);
   }
 
@@ -62,6 +103,7 @@ class App extends Component {
   }
 
   handleChangeOnClick(id) {
+    console.log('test ' + id);
     let isDetailPage = false;
     if (solutions[0].content[id] === undefined) {
       isDetailPage = false;
@@ -84,7 +126,10 @@ class App extends Component {
     }
   }
 
-  goToLandingPage() {
+  goToLandingPage(filter) {
+    //console.log(filter);  
+    this.setState({filter: filter});
+    window.location.pathname = filter.toLowerCase();
     let items = Object.assign({}, this.state);
     items.currentSolution = undefined;
     items.isDetailPage = false;
@@ -125,25 +170,29 @@ class App extends Component {
   }
 
   render() {
-    let filter = "Bookstore";
+    let filter = this.state.filter;
     let isDetailPage = this.state.isDetailPage;
-
+    //console.log(filter);
     return (
       <div className={`App ${isDetailPage ? 'detail-page' : 'landing-page'} `}>
         {!isDetailPage &&
           <div className="landing-page-header">
             <div className="show page-title">
-              Bookstore
+              {this.state.currentSolution.title}
+            </div>
+            <div className="">
+              {this.state.currentSolution.headerText}
             </div>
             <div className="show page-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <div dangerouslySetInnerHTML={{ __html: this.state.currentSolution.categoryDescription.paragraphs[0]}} />             
             </div>
           </div>
         }
 
         <div className="nav-bar">
           <SolutionNavBarWrapper
-            allSolutions={this.state.solutions}
+            allSolutions={this.state.content}
+            currentSolution={this.state.currentSolution}
             changeClassNameToShow={this.changeClassNameToShow}
             changeClassNameToHide={this.changeClassNameToHide}
             handleChangeOnClick={this.handleChangeOnClick}
@@ -152,14 +201,14 @@ class App extends Component {
         </div>
 
         {isDetailPage &&
-          <div className="breadcrumb">
-            Tour Homepage > <a onClick={() => this.goToLandingPage() }>{filter}</a>
+          <div className="breadcrumb jumbo">
+            Tour Homepage > <a onClick={() => this.goToLandingPage(filter) }>{filter}</a> > {this.state.currentSolution.url}
           </div>
         }
 
         {!isDetailPage &&
           <div className="landing-page-content">
-            Landing page copy: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <div dangerouslySetInnerHTML={{ __html: this.state.currentSolution.categoryDescription.paragraphs[1]}} />
           </div>
         }
 
@@ -168,6 +217,7 @@ class App extends Component {
             <Switch>
               {this.state.solutions.content.filter(content => {
                 return content.categories.includes(filter)
+                //return '/'+content.url === this.state.location
               }).map((content, index) => {
                 return <Route
                           key={index}

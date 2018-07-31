@@ -16,7 +16,7 @@ class Solution extends React.Component {
     }
 
     return (
-      <div className="Solution">
+      <div className="Solution container">
         <IndividualContentWrapper
           currentSolution={this.props.currentSolution}
           previousSolution={this.props.previousSolution}

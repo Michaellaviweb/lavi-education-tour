@@ -4,10 +4,7 @@
 /* Scalable margins */
 .Solution {
   /*margin: 0px 260px; */
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+  background-color: white;
 }
 
 /*# sourceMappingURL=Solution.css.map */

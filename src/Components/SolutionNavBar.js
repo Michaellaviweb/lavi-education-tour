@@ -8,9 +8,10 @@ class SolutionNavBar extends React.Component {
   }
 
   render() {
+    console.log(this.props.allSolutions)
     return(
       <div className="SolutionNavBar">
-        {this.props.allSolutions.content.map(solution => {
+        {this.props.allSolutions.map(solution => {
           return <Image
             isDetailPage={this.props.isDetailPage}
             id={solution.id}

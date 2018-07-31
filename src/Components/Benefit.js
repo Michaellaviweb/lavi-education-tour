@@ -11,8 +11,12 @@ class Benefit extends React.Component {
   render() {
     return (
       <div className="Benefit">
-        <img src={this.props.icon} />
-        {this.props.text}
+        <div className="row">
+          <img src={this.props.icon} />
+        </div>
+        <div className="row">
+          {this.props.text}
+        </div>
       </div>
     );
   }

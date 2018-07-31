@@ -84,14 +84,17 @@
   .Images.small-image {
     width: 150px;
     height: 150px; }
-    .Images.small-image .overlay,
+    .Images.small-image .overlay{
+      height: 155px;
+      width:150px;
+    }
     .Images.small-image img {
       width: 150px;
       height: 150px; }
     .Images.small-image .overlay {
-      margin: -150px 0 0 0; }
+      margin: -155px 0 0 0; }
     .Images.small-image .image-title {
-      top: calc(150px - 40px);
+      top: calc(155px - 40px);
       width: 150px; }
     .Images.small-image .image-description {
       width: 150px;
