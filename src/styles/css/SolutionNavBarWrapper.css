@@ -14,9 +14,14 @@
   .SolutionNavBarWrapper .wrapper {
     overflow-y: hidden;
     background-color: #FFFFFF;
-    width: 100%;
-    
-    padding: 0px 10% 0px 10%;
+    width: 100%;    
+    /*padding: 0px 10% 0px 10%;*/
+      }
+
+  .SolutionNavBarWrapper .scroll{
+    width:100%;
+    padding-right: 100px;
+    padding-left: 100px;
   }
   .SolutionNavBarWrapper .bigImage, .SolutionNavBarWrapper .bigImage img {
     float: left;
@@ -26,25 +31,45 @@
   
   .SolutionNavBarWrapper .scroll-arrow {
     position: absolute;
-    left:10%;
+    left:100px;
     margin-top: 50px;
     color: #FFFFFF; }
-    
+  
   .SolutionNavBarWrapper .carousel-button {
     color: #FFFFFF;
-    width:10%;
+    width:100px;
     height: 100%;
     background-color: black;
     opacity: .7;
     z-index: 1000;
     position: absolute;
     margin-top:2px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    cursor: pointer;
+  }
+  @media screen and (max-width: 600px) { 
+    .SolutionNavBarWrapper .carousel-button {
+      width: 50px;
+    }
+    .SolutionNavBarWrapper .scroll {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+  }
+  .SolutionNavBarWrapper .carousel-button:hover {
+    opacity: .9;
+    transition: .5s ease-out;
+    -moz-transition: .5s ease-out;
+    -webkit-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
   }
   .SolutionNavBarWrapper .carousel-button.button-right {
-    
     right: 0px;
     top:0px;
   }
+  
   /*
     .SolutionNavBarWrapper .carousel-button.button-left {
       /*margin: auto -120px auto 120px;

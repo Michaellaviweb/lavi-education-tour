@@ -3,11 +3,12 @@
 /* Scalable padding, all positions */
 /* Scalable margins */
 .App {
-  max-width: 1440px;
+  
   font-family: "Open Sans", sans-serif;
   font-weight: 300; }
   .App .landing-page-header {
-    margin: 30px 140px; }
+   
+  }
   .App .landing-page {
     font-size: calc(14px + 2 * ( (100vw - 420px) / 580)); }
     @media screen and (max-width: 420px) {
@@ -59,7 +60,7 @@
       cursor: pointer; }
   .App .landing-page-content {
     font-size: calc(14px + 4 * ( (100vw - 420px) / 580));
-    padding: 30px 140px; }
+  }
     @media screen and (max-width: 420px) {
       .App .landing-page-content {
         font-size: 14px; } }

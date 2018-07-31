@@ -23,7 +23,8 @@ class App extends Component {
       solutions: solutions[0],
       content: solutions[0].content,
       isDetailPage: false,
-      filter: ""
+      filter: "",
+      mobileView: false
     }
     this.componentDidMount = this.componentDidMount.bind(this);
     this.changeClassNameToShow = this.changeClassNameToShow.bind(this);
@@ -85,6 +86,7 @@ class App extends Component {
     items.location = location;
     items.filter = filter;
     items.content = content;
+    items.mobileView = window.innerWidth < 600;
     this.setState(items);
   }
 
@@ -176,7 +178,7 @@ class App extends Component {
     return (
       <div className={`App ${isDetailPage ? 'detail-page' : 'landing-page'} `}>
         {!isDetailPage &&
-          <div className="landing-page-header">
+          <div className="landing-page-header container">
             <div className="show page-title">
               {this.state.currentSolution.title}
             </div>
@@ -189,8 +191,9 @@ class App extends Component {
           </div>
         }
 
-        <div className="nav-bar">
-          <SolutionNavBarWrapper
+        <div className="nav-bar jumbo">
+          <SolutionNavBarWrapper 
+            mobileView={this.state.mobileView}           
             allSolutions={this.state.content}
             currentSolution={this.state.currentSolution}
             changeClassNameToShow={this.changeClassNameToShow}
@@ -207,7 +210,7 @@ class App extends Component {
         }
 
         {!isDetailPage &&
-          <div className="landing-page-content">
+          <div className="landing-page-content container">
             <div dangerouslySetInnerHTML={{ __html: this.state.currentSolution.categoryDescription.paragraphs[1]}} />
           </div>
         }
