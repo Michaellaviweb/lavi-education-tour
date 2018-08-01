@@ -39,6 +39,7 @@ class App extends Component {
   }
   componentDidMount() {
     let isDetailPage = false;
+    let isHomePage = false;
     let currentSolution;
     let filter = '';
     let location = window.location.pathname;
@@ -47,47 +48,53 @@ class App extends Component {
 
     if (typeof window === 'object') {
       //if (window.location.pathname === '/'+filter) {
-      currentSolution = this.state.solutions.categories.filter(catagory => {
-        return '/'+catagory.url === location
-      })[0];
-      
-      if(currentSolution === undefined){
-        
-        isDetailPage = true;
-        currentSolution = this.state.solutions.content.filter(content => {
-          //return content.categories.includes()
-          return '/'+content.url === location
-        })[0];
-        filter = currentSolution.categories[0];
+      if(window.location.pathname === '/'){
+        isHomePage = true;
       }
       else{
-        isDetailPage = false;
-        filter = currentSolution.title;
-        content = this.state.solutions.content.filter(content => {
-          return content.categories.includes(filter)
-        });
-        console.log(content);
-      }
-      console.log(currentSolution);
-        
-      /*} else {
-        isDetailPage = true;
-        currentSolution = this.state.solutions.content.filter(content => {
-          return content.categories.includes(filter)
-        }).filter((content, index) => {
-          return '/'+content.url === window.location.pathname
+        currentSolution = this.state.solutions.categories.filter(catagory => {
+          return '/'+catagory.url === location
         })[0];
-        //console.log('cs', currentSolution);
-      }*/
+        
+        if(currentSolution === undefined){
+          
+          isDetailPage = true;
+          currentSolution = this.state.solutions.content.filter(content => {
+            //return content.categories.includes()
+            return '/'+content.url === location
+          })[0];
+          filter = currentSolution.categories[0];
+        }
+        else{
+          isDetailPage = false;
+          filter = currentSolution.title;
+          content = this.state.solutions.content.filter(content => {
+            return content.categories.includes(filter)
+          });
+          console.log(content);
+        }
+        console.log(currentSolution);
+          
+        /*} else {
+          isDetailPage = true;
+          currentSolution = this.state.solutions.content.filter(content => {
+            return content.categories.includes(filter)
+          }).filter((content, index) => {
+            return '/'+content.url === window.location.pathname
+          })[0];
+          //console.log('cs', currentSolution);
+        }*/
+      }
+      let items = Object.assign({}, this.state);
+      items.isDetailPage = isDetailPage;
+      items.currentSolution = currentSolution;
+      items.location = location;
+      items.filter = filter;
+      items.content = content;
+      items.mobileView = window.innerWidth < 600;
+      items.isHomePage = isHomePage;
+      this.setState(items);
     }
-    let items = Object.assign({}, this.state);
-    items.isDetailPage = isDetailPage;
-    items.currentSolution = currentSolution;
-    items.location = location;
-    items.filter = filter;
-    items.content = content;
-    items.mobileView = window.innerWidth < 600;
-    this.setState(items);
   }
 
   changeClassNameToShow() {
@@ -174,9 +181,11 @@ class App extends Component {
   render() {
     let filter = this.state.filter;
     let isDetailPage = this.state.isDetailPage;
+    let isHomePage = this.state.isHomePage;
     //console.log(filter);
-    return (
+    return (      
       <div className={`App ${isDetailPage ? 'detail-page' : 'landing-page'} `}>
+      
         {!isDetailPage &&
           <div className="landing-page-header container">
             <div className="show page-title">
@@ -205,7 +214,7 @@ class App extends Component {
 
         {isDetailPage &&
           <div className="breadcrumb jumbo">
-            Tour Homepage > <a onClick={() => this.goToLandingPage(filter) }>{filter}</a> > {this.state.currentSolution.url}
+            <a href="/">Tour Homepage</a> > <a onClick={() => this.goToLandingPage(filter) }>{filter}</a> > {this.state.currentSolution.url}
           </div>
         }
 
@@ -247,6 +256,7 @@ class App extends Component {
             </Switch>
         }
       </div>
+      
     );
   }
 }
