@@ -1,30 +1,84 @@
 <html>
+    <link rel="stylesheet" href="./styles/css/globals/beauter.css" />
     <body>
-        <div class="container slide bg-parallax" id="slide1">
+        <div class="slide" id="slide1">
+            <div class="jumbo textbox">
+                <h1>Queue Management and Crowd Control Systems Across the Campus Environment</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra placerat augue interdum rhoncus. In hac habitasse platea dictumst. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum nisl nulla, vulputate nec faucibus ac, porta in nibh. Morbi cursus ornare neque ac dapibus. Duis varius ex turpis, pharetra mollis purus mattis eu. Vivamus aliquam arcu ligula, at facilisis lorem sagittis ut. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            </div>
+            <div class="next"></div>
 
         </div>
-        <div class="container slide" id="slide2">
+        <div class="slide" id="slide2">
+                <div class="next"></div>
 
         </div>
-        <div class="container slide bg-parallax" id="slide3">
-            
+        <div class="slide" id="slide3">
+            <!--<img src="../public/HomePage/Campus-Map-Icons.png" style="width: 100%;" />-->
+            <div class="next"></div>
         </div>
     </body>
 </html>
 <style>
-    .slide{
+    .textbox{
+        position:relative;
+        padding: 20%;
+    }
+    #slide1 div h1{
+        font-size: 75px;
+        color:white;
+        text-align: left;
+        font-family: 'Arial Narrow', Arial, sans-serif;        
+    }
+    #slide1 div p{
+        text-align: left;
+        color:white;
+    }
+    .next {
+        color:white;
+        position: relative;
+        cursor:pointer;
+        font-size:400%;
+        text-align: center;
+    }
+    .next:after {
+        content:'▼';
+    }
+    .slide{        
         background-size: cover;
         background-repeat: no-repeat;
-        height: 1000px;
+        /*height: 800px;*/
         width: 100%;
+        background-attachment: fixed;
     }
     #slide1{
-        background-image: url('http://www.sapeloweekendatbernies.com/wp-content/uploads/2015/05/RJ-Reynolds-Mansion-1200-x-750.png');
+        
+        background-image: url('../public/HomePage/Campus-Overview.jpg');
     }
     #slide2{
-        background-image: url('http://www.plasticbionic.com/wp-content/uploads/2014/03/India_Illustration_CGI-1200x750.jpg');
+        background-image: url('../public/HomePage/Campus-Girls.jpg');
     }
     #slide3{
-        background-image: url('http://www.plasticbionic.com/wp-content/uploads/75_CHRISTMAS_Illustration_4-1200x750.jpg');
+        background-image: url('../public/HomePage/Campus-Map-Base.jpg');
     }
 </style>
+<script>
+    Array.from(document.getElementsByClassName('slide')).forEach(element => {
+        element.style.height = window.innerHeight;
+    });
+    Array.from(document.getElementsByClassName('next')).forEach(element => {
+        element.style.top = window.innerHeight - 100;
+        //element.style.bottom = 100;
+        element.onclick = slideDown;
+    });
+    Array.from(document.getElementsByClassName('textbox')).forEach(element => {
+        element.style.top = window.innerHeight/8;
+        //element.style.bottom = 100;
+        //element.onclick = slideDown;
+    });
+    function slideDown(e){
+        //alert('test');
+        document.documentElement.scrollTop += 900;
+        alert(document.documentElement.scrollTop);
+    }
+</script>

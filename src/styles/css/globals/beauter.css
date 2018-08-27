@@ -414,43 +414,35 @@ dl dt
 
 table
 {
-    overflow-x: auto;
-
-    margin-bottom: 2.5rem;
-
-    border-collapse: collapse;
+    
 }
 
 th,
 td
 {
-    padding: 12px 15px;
-
-    text-align: left;
-
-    border-bottom: 1px solid #e1e1e1;
+    
 }
 
 th:first-child,
 td:first-child
 {
-    padding-left: 5px;
+    
 }
 
 th:last-child,
 td:last-child
 {
-    padding-right: 5px;
+    
 }
 
 tr:hover
 {
-    background-color: #f5f5f5;
+    
 }
 
 tr:nth-child(even)
 {
-    background-color: #f2f2f2;
+    
 }
 
 
@@ -879,7 +871,11 @@ ul.breadcrumb li a:hover
     }
 }
 
-
+@media screen and (max-width: 550px){
+    .container{
+      padding: 0px;
+    }
+  }  
 /* For devices larger than 550px */
 
 @media only screen and (min-width: 550px)

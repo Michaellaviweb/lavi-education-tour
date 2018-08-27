@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Home from './Home.js'
 import { solutions } from './data/data.js';
 import Solution from './Components/Solution.js';
 import SolutionNavBarWrapper from './Components/SolutionNavBarWrapper.js';
@@ -48,7 +49,7 @@ class App extends Component {
 
     if (typeof window === 'object') {
       //if (window.location.pathname === '/'+filter) {
-      if(window.location.pathname === '/'){
+      if(window.location.pathname === '/home'){
         isHomePage = true;
       }
       else{
@@ -183,6 +184,8 @@ class App extends Component {
     let isDetailPage = this.state.isDetailPage;
     let isHomePage = this.state.isHomePage;
     //console.log(filter);
+    if(isHomePage)
+      return <Home />
     return (      
       <div className={`App ${isDetailPage ? 'detail-page' : 'landing-page'} `}>
       
@@ -200,7 +203,7 @@ class App extends Component {
           </div>
         }
 
-        <div className="nav-bar jumbo">
+        <div className="nav-bar">
           <SolutionNavBarWrapper 
             mobileView={this.state.mobileView}           
             allSolutions={this.state.content}
@@ -213,8 +216,8 @@ class App extends Component {
         </div>
 
         {isDetailPage &&
-          <div className="breadcrumb jumbo">
-            <a href="/">Tour Homepage</a> > <a onClick={() => this.goToLandingPage(filter) }>{filter}</a> > {this.state.currentSolution.url}
+          <div className="breadcrumb container">
+            <a href="/home">Tour Homepage</a> > <a onClick={() => this.goToLandingPage(filter) }>{filter}</a> > {this.state.currentSolution.url}
           </div>
         }
 

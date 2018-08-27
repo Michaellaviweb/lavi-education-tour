@@ -10,8 +10,7 @@ class Paragraph extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.props.text}
+      <div dangerouslySetInnerHTML={{__html: this.props.text}}>
       </div>
     );
   }

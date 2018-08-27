@@ -1,4 +1,5 @@
 import App from './App';
+import Home from './Home';
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import express from 'express';
@@ -7,19 +8,21 @@ import { renderToString } from 'react-dom/server';
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 const server = express();
+let markup = "";
 server
   .disable('x-powered-by')
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .get('/*', (req, res) => {
     const context = {};
-    const markup = renderToString(
-      <StaticRouter context={context} location={req.url}>
-        <App />
-      </StaticRouter>
+    const markup  = renderToString(
+        <StaticRouter context={context} location={req.url}>
+          <App />
+        </StaticRouter>
     );
+       
 
     if (context.url) {
-      res.redirect(context.url);
+      //res.redirect(context.url);
     } else {
       var appTitle = "Lavi App Title";
 
@@ -38,11 +41,15 @@ server
             ? `<link rel="stylesheet" href="${assets.client.css}">`
             : ''
         }
-        ${
+        
+        ${         
+          //console.log(req.url)       
           process.env.NODE_ENV === 'production'
             ? `<script src="${assets.client.js}" defer></script>`
-            : `<script src="${assets.client.js}" defer crossorigin></script>`
+            : `<script src="${assets.client.js}" defer crossorigin></script>`          
         }
+      
+        
     </head>
     <body>
         <div id="root">${markup}</div>

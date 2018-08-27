@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+.lbl{
+    padding-right: 1em;
+    text-align: right;
+    vertical-align: top;
+}
+.form-container table{
+    display: inherit;
+    width: 90%;
+    margin: 0 5%;
+}
+@media only screen and (min-width: 550px)
+{
+    .lbl{
+        display: inline;
+    }
+}
+    
+@media only screen and (min-width: 550px)
+{
+    .form-container table{ 
+        display: table;       
+        width: 50%;
+        margin: 0 17%;
+    }
+}
+
+table tbody tr td button {
+    width: 100%;
+    border-radius: 0px;
+    background-color: darkslategray;
+    color:white;
+    font-size: 15px;
+}
+table tbody tr td button:hover{
+    color:white;
+}
+.field .col{
+    padding-top:1px;
+}
+.lbl{
+    padding-top:1px;
+}
