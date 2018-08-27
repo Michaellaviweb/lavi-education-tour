@@ -15,9 +15,9 @@ class SolutionNavBar extends React.Component {
           return <Image
             isDetailPage={this.props.isDetailPage}
             id={solution.id}
-            source={solution.thumbImage}
+            source={(this.props.isDetailPage) ? solution.thumbImage : solution.homeImage}
             key={solution.id}
-            title={solution.title}
+            title={solution.subTitle}
             description={solution.description}
             url={solution.url}
             handleChangeOnClick={this.props.handleChangeOnClick}

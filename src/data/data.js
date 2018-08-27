@@ -71,7 +71,7 @@ var solutions = [
 			"title":"Bookstore",//Home Page
 			"url": "bookstore/",
 			"headerText":"1 This is placeholder header text",
-			"thumbImage":"https://www.lavi.com/upload/CustomFiles/education/img/main.jpg",//Big Image
+			"thumbImage":"/IMAGES-NAV-Campus-Carousel/NAV1-College-Bookstore-Waiting-Line.jpg",//Big Image
 			"categoryDescription":{
 				"paragraphs":[
 					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis leo id convallis congue. Nulla vitae nulla erat. Mauris volutpat congue ex et tincidunt. Praesent iaculis erat luctus accumsan sagittis.",
@@ -185,6 +185,7 @@ var solutions = [
 			"id": "0",
 			"url": "impulse_merchandising",
 			"title":"Impulse Merchandising",
+			"subTitle":"Merchandising",
         	"bannerImage":"",
 				"description":"description 1",
 				"categories":["Bookstore"],
@@ -349,6 +350,7 @@ var solutions = [
 			{
 		"id": "1",
 		"title":"Checkout Queue",
+		"subTitle":"Checkout",
     "bannerImage":"",
 		"url": "checkout_queue",
 		"description":"description 2",
@@ -529,6 +531,7 @@ var solutions = [
 		{
 		"id": "2",
 		"title":"In-Store Pickup/Service Desk",
+		"subTitle":"Service Desk",
     "bannerImage":"",
 		"url": "in_store_pickup",
 		"description":"description 3",
@@ -643,6 +646,7 @@ var solutions = [
 		{
 		"id": "3",
 		"title":"Store Analytics and People Counting",
+		"subTitle":"Store Analytics",
     "bannerImage":"",
 		"url": "store_analytics",
 		"description":"description 4",
@@ -760,6 +764,7 @@ var solutions = [
 		{
 		"id": "4",
 		"title":"Intelligent Facility Maintenance",
+		"subTitle":"Facility Maintenance",
     "bannerImage":"",
 		"url": "facility_maintenance",
 		"description":"description 5",
@@ -882,6 +887,7 @@ var solutions = [
 		{
 		"id": "5",
 		"title":"Digital Signage",
+		"subTitle":"Digital Signage",
     "bannerImage":"",
 		"url": "digital_signage",
 		"description":"description 6",
@@ -970,6 +976,7 @@ var solutions = [
 		{
 		"id": "6",
 		"title":"Store Signage",
+		"subTitle":"Store Signage",
     "bannerImage":"",
 		"url": "store_signage",
 		"description":"description 7",

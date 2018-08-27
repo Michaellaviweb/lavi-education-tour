@@ -9,7 +9,7 @@ class MainImage extends React.Component {
 
   handleMainImageClick() {
     this.props.changeClassNameToShow();
-    this.props.history.push('/');
+    this.props.history.push('/home');
     this.props.handleChangeOnClick();
   }
 

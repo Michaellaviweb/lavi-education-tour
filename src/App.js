@@ -113,7 +113,7 @@ class App extends Component {
   }
 
   handleChangeOnClick(id) {
-    console.log('test ' + id);
+    //console.log('test ' + id);
     let isDetailPage = false;
     if (solutions[0].content[id] === undefined) {
       isDetailPage = false;
