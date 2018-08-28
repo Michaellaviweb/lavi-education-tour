@@ -4,7 +4,7 @@ import http from 'http';
 const server = http.createServer(app);
 
 let currentApp = app;
-
+process.env.HTTPS = true;
 server.listen(process.env.PORT || 3000, error => {
   if (error) {
     console.log(error);
